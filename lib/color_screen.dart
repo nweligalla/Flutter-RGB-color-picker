@@ -102,7 +102,7 @@ class _ColorScreenState extends State<ColorScreen> {
             child: Column(
               children: [
                 Text(
-                  "Made by ❤️ with Flutter",
+                  "Made with ❤️ by Flutter",
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
                 SizedBox(
