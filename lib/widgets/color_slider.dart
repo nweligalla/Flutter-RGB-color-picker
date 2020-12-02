@@ -20,14 +20,19 @@ class ColorSlider extends StatelessWidget {
         ),
         RotatedBox(
           quarterTurns: -1,
-          child: Slider(
-            value: currentValue.toDouble(),
-            onChanged: onChanged,
-            divisions: 255,
-            activeColor: color,
-            inactiveColor: Colors.grey[800],
-            min: 0,
-            max: 255,
+          child: SliderTheme(
+            data: SliderTheme.of(context).copyWith(
+              activeTrackColor: color,
+              inactiveTrackColor: Colors.grey[350],
+              thumbColor: color,
+            ),
+            child: Slider(
+              value: currentValue.toDouble(),
+              onChanged: onChanged,
+              divisions: 255,
+              min: 0,
+              max: 255,
+            ),
           ),
         )
       ],
